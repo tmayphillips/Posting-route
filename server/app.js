@@ -11,10 +11,6 @@ var cors = require('cors')
 server.use(cors())
 server.use(bodyParser.json())
 
-server.get('/', function(req,res) {
-  res.send(`The book`);
-})
-
 server.post('/fullname',(req,res) => {
   console.log(req.body);
   let firstname = req.body.userFirstName
